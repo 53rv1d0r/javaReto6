@@ -11,32 +11,38 @@ package com.tekknia.mavenproject6;
  * Universidad de Antioquia - Técnicas de programación2021
  */
 public class Cuenta {
+    //Declarando Atributos
+    private int id;
+    private float saldo;
+    public static final float MONTO_MAXIMO = 1000000f;
+    public static final int MAXIMO_TRANSACCIONES = 3;
+
+    //private String NDocumento;
+    //private final int montoMaximo = 1000000;
+    //private final int trasaPermitidas = 3;
+    //private String pais;
     
-    private int saldo;
-// Declarar atributos.
-
-    private String NDocumento;
-    private final int montoMaximo = 1000000;
-    private final int trasaPermitidas = 3;
-    private String pais;
-
-    public Cuenta(int saldo) {
+    //Constructor de la clase Cuenta
+    public Cuenta(int id, float saldo) {
+        this.id = id;
         this.saldo = saldo;
     }
+    //getters y setters id
 
-    public int diferencia(int saldo) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    //getters y setters saldo
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(float saldo) {
         this.saldo = saldo;
-        return this.saldo;
-    }
-
-    public int realizar(int retiro) {
-        this.saldo = this.saldo - retiro;
-        return this.saldo;
-    }
-
-    public int realizar1(int deposito) {
-        this.saldo = this.saldo + deposito;
-        return this.saldo;
     }
     
 }
